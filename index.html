@@ -911,16 +911,37 @@ img { display: block; max-width: 100%; }
   .stats-grid { grid-template-columns: repeat(2,1fr); gap: 32px; }
 }
 @media (max-width: 640px) {
-  .section { padding: 64px 0; }
-  .container { padding: 0 18px; }
-  .product-grid, .abrasivos-grid { grid-template-columns: 1fr; }
-  .diff-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .hero-btns { flex-direction: column; }
-  .cta-btns  { flex-direction: column; align-items: center; }
+  .section { padding: 52px 0; }
+  .section-sm { padding: 40px 0; }
+  .container { padding: 0 20px; }
+  
+  #navbar { height: 80px; }
+  .nav-logo img { height: 52px !important; }
+  .nav-logo-name { font-size: 1.15rem; }
+  .nav-logo-sub { font-size: 10px; }
+  
+  #mobile-drawer { top: 80px; padding: 10px 20px 20px; }
+  .hero { padding-top: 80px; text-align: center; }
+  .hero-grid { padding: 40px 0; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-btns { justify-content: center; }
+  .hero-phones { justify-content: center; }
+  
+  .section-title { font-size: 1.75rem; text-align: center; }
+  .section-tag { justify-content: center; width: 100%; }
+  .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
+
+  .product-grid, .abrasivos-grid { grid-template-columns: 1fr; gap: 12px; }
+  .diff-grid { grid-template-columns: 1fr; gap: 12px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .footer-socials { justify-content: center; }
+  .footer-contact-item { justify-content: center; text-align: center; }
+  .footer-bottom { justify-content: center; text-align: center; }
+
   .nav-links, #navbar .btn { display: none; }
   #nav-hamburger { display: flex; flex-direction: column; }
-  .about-pills { grid-template-columns: repeat(3,1fr); }
+  .about-pills { grid-template-columns: repeat(3,1fr); gap: 8px; }
+  .about-pill-num { font-size: 1.2rem; }
   .mq-outer::before, .mq-outer::after { width: 32px; }
   #trabalhe-conosco .container > div { grid-template-columns: 1fr !important; gap: 28px !important; }
 }
