@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protect EPIs e Abrasivos | Curitiba — PR</title>
+<meta name="description" content="Protect EPIs e Abrasivos — Distribuidor exclusivo CERTTO em Curitiba. Luvas, botinas, capacetes, discos de corte e muito mais.">
+<link rel="icon" type="image/png" href="logo-white.png">
+<link rel="shortcut icon" href="logo-white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────────── */
+:root {
+  --blue:        #1E40AF;
+  --blue-dark:   #1E3A8A;
+  --blue-mid:    #2563EB;
+  --blue-50:     #EFF6FF;
+  --blue-100:    #DBEAFE;
+  --orange:      #EA580C;
+  --orange-50:   #FFF7ED;
+  --orange-100:  #FFEDD5;
+  --green:       #16A34A;
+
+  --gray-50:     #F9FAFB;
+  --gray-100:    #F3F4F6;
+  --gray-200:    #E5E7EB;
+  --gray-400:    #9CA3AF;
+  --gray-500:    #6B7280;
+  --gray-700:    #374151;
+  --gray-800:    #1F2937;
+  --gray-900:    #111827;
+
+  --shadow-xs:   0 1px 2px rgba(0,0,0,.05);
+  --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+  --shadow-md:   0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+  --shadow-lg:   0 12px 28px rgba(0,0,0,.09), 0 4px 8px rgba(0,0,0,.04);
+  --shadow-xl:   0 24px 48px rgba(0,0,0,.10), 0 8px 16px rgba(0,0,0,.05);
+  --shadow-blue: 0 8px 24px rgba(30,64,175,.28);
+  --shadow-green:0 8px 24px rgba(22,163,74,.30);
+
+  --radius-sm:   8px;
+  --radius:      12px;
+  --radius-lg:   16px;
+  --radius-xl:   20px;
+  --radius-2xl:  24px;
+}
+
+/* ─────────────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--gray-900);
+  background: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY UTILITIES
+───────────────────────────────────────────── */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+}
+.section-tag.center { justify-content: center; }
+.section-tag.orange { color: var(--orange); }
+.section-tag.orange::before { background: var(--orange); }
+
+.section-title {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--gray-900);
+  letter-spacing: -.02em;
+}
+.section-sub {
+  font-size: 1rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-top: 12px;
+}
+.section-sub.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+/* ─────────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+  white-space: nowrap;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary:hover { background: var(--blue-dark); box-shadow: var(--shadow-blue); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+}
+.btn-outline:hover { background: var(--blue-50); box-shadow: none; }
+
+.btn-whatsapp { background: #22C55E; color: #fff; }
+.btn-whatsapp:hover { background: #16A34A; box-shadow: var(--shadow-green); }
+
+.btn-orange { background: var(--orange); color: #fff; }
+.btn-orange:hover { background: #C2410C; box-shadow: 0 8px 24px rgba(234,88,12,.30); }
+
+.btn-lg { padding: 15px 32px; font-size: 15.5px; border-radius: var(--radius); }
+
+.btn-white { background: #fff; color: var(--blue); }
+.btn-white:hover { background: #f8fafc; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+
+/* ─────────────────────────────────────────────
+   FLOATING WHATSAPP
+───────────────────────────────────────────── */
+.wa-float {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 9000;
+  width: 56px;
+  height: 56px;
+  background: #22C55E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(34,197,94,.45);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.wa-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(34,197,94,.55);
+}
+.wa-float i { font-size: 1.5rem; color: #fff; }
+
+/* ─────────────────────────────────────────────
+   NAVBAR
+───────────────────────────────────────────── */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 8000;
+  height: 115px;
+  background: rgba(30, 64, 175, 0.65);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  transition: box-shadow .3s;
+}
+#navbar.scrolled { background: rgba(30, 64, 175, 0.7); box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nav-logo { display: flex; align-items: center; gap: 11px; }
+.nav-logo-icon {
+  width: 64px; height: 64px;
+  background: var(--blue);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.nav-logo-icon i { color: #fff; font-size: 1rem; }
+.nav-logo-name { font-size: 1.45rem; font-weight: 900; color: #fff; line-height: 1; }
+.nav-logo-sub  { font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,0.8); letter-spacing: .14em; text-transform: uppercase; line-height: 1; margin-top: 4px; }
+
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  transition: color .2s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-links a.orange:hover { color: var(--orange); }
+
+/* hamburger */
+#nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+#nav-hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: #fff; border-radius: 2px;
+  transition: all .25s;
+  margin-bottom: 5px;
+}
+#nav-hamburger span:last-child { margin-bottom: 0; }
+
+/* mobile drawer */
+#mobile-drawer {
+  display: none;
+  position: fixed;
+  top: 115px; left: 0; right: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--gray-200);
+  padding: 18px 24px 22px;
+  z-index: 7999;
+  box-shadow: var(--shadow-lg);
+}
+#mobile-drawer.open { display: block; }
+#mobile-drawer a {
+  display: block;
+  font-size: 14px; font-weight: 500;
+  color: var(--gray-700);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-100);
+  transition: color .2s;
+}
+#mobile-drawer a:last-of-type { border-bottom: none; }
+#mobile-drawer a:hover { color: var(--blue); }
+#mobile-drawer .drawer-cta { margin-top: 14px; width: 100%; }
+
+/* ─────────────────────────────────────────────
+   SECTION WRAPPER
+───────────────────────────────────────────── */
+.section { padding: 96px 0; }
+.section-sm { padding: 72px 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+.section-head { margin-bottom: 60px; }
+
+/* ─────────────────────────────────────────────
+   HERO
+───────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  padding-top: 115px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg-shape {
+  position: absolute;
+  top: 0; right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--blue-50) 0%, #e0eaff 100%);
+  clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 80px 0;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
+  color: var(--blue);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 40px;
+  margin-bottom: 22px;
+}
+.hero-title {
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  color: var(--gray-900);
+  margin-bottom: 20px;
+}
+.hero-title span { color: var(--blue); }
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--gray-500);
+  line-height: 1.72;
+  max-width: 420px;
+  margin-bottom: 34px;
+}
+.hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+.hero-phones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--gray-100);
+}
+.hero-phone-item {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 600; color: var(--gray-500);
+  transition: color .2s;
+}
+.hero-phone-item:hover { color: var(--blue); }
+.hero-phone-item i { color: var(--blue); font-size: 11px; }
+.hero-phone-sep { width: 1px; height: 16px; background: var(--gray-200); }
+
+/* hero image side */
+.hero-img-wrap { position: relative; }
+.hero-main-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+}
+.hero-badge-float {
+  position: absolute;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  gap: 12px;
+}
+.hero-badge-float.bottom {
+  bottom: -18px;
+  left: -24px;
+}
+.hero-badge-float.top {
+  top: -18px;
+  right: -18px;
+  background: var(--orange);
+  border-color: var(--orange);
+  flex-direction: column;
+  padding: 14px 16px;
+  gap: 4px;
+  text-align: center;
+}
+.float-icon {
+  width: 40px; height: 40px;
+  background: var(--blue-50);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.float-icon i { color: var(--blue); font-size: .95rem; }
+.float-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.float-value { font-size: 1.1rem; font-weight: 900; color: var(--gray-900); line-height: 1; }
+.float-sub   { font-size: .7rem; color: var(--gray-400); font-weight: 500; }
+
+/* ─────────────────────────────────────────────
+   STATS BAR
+───────────────────────────────────────────── */
+.stats-bar {
+  background: var(--blue);
+  padding: 52px 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+.stat-num {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -.02em;
+}
+.stat-label { font-size: 13px; font-weight: 500; color: rgba(255,255,255,.65); }
+
+/* ─────────────────────────────────────────────
+   ABOUT
+───────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.about-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.about-img-tall {
+  grid-row: span 2;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.about-img-tall img { width: 100%; height: 100%; object-fit: cover; }
+.about-img-sm {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.about-img-sm img { width: 100%; height: 190px; object-fit: cover; }
+
+.about-pills { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 28px; }
+.about-pill {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  padding: 16px 10px;
+  text-align: center;
+}
+.about-pill-num { font-size: 1.55rem; font-weight: 900; color: var(--blue); line-height: 1; }
+.about-pill-label { font-size: 11px; color: var(--gray-500); font-weight: 500; margin-top: 5px; }
+
+.certto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--orange-50);
+  border: 1px solid var(--orange-100);
+  border-radius: var(--radius-lg);
+  padding: 14px 20px;
+  margin: 22px 0 28px;
+}
+.certto-icon {
+  width: 36px; height: 36px;
+  background: var(--orange);
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.certto-icon i { color: #fff; font-size: .85rem; }
+.certto-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--orange); }
+.certto-text  { font-size: 13.5px; font-weight: 800; color: var(--gray-900); line-height: 1.2; }
+
+.about-checklist { display: flex; flex-direction: column; gap: 14px; }
+.about-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.check-icon {
+  width: 36px; height: 36px;
+  background: var(--blue-50);
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.check-icon i { color: var(--blue); font-size: .8rem; }
+.check-title { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 2px; }
+.check-sub   { font-size: 13px; color: var(--gray-500); line-height: 1.55; }
+
+/* ─────────────────────────────────────────────
+   PRODUCT CARDS (EPIs)
+───────────────────────────────────────────── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 26px 22px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s;
+  position: relative;
+  overflow: hidden;
+}
+.product-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.product-card:hover::after { transform: scaleX(1); }
+
+.card-icon {
+  width: 44px; height: 44px;
+  background: var(--blue-50);
+  border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.card-icon i { color: var(--blue); font-size: .95rem; }
+.card-title { font-size: 14.5px; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; }
+.card-desc  { font-size: 13px; color: var(--gray-500); line-height: 1.6; margin-bottom: 18px; }
+.card-link  {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 13px; font-weight: 700; color: var(--blue);
+  transition: gap .2s;
+}
+.card-link:hover { gap: 9px; }
+
+/* Abrasivos card variant */
+.abrasivos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.abr-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 26px 22px;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.abr-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+.abr-card:hover {
+  background: #fff;
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+  transform: translateY(-5px);
+}
+.abr-card:hover::before { transform: scaleX(1); }
+.abr-icon {
+  width: 44px; height: 44px;
+  background: var(--orange-100);
+  border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.abr-icon i { color: var(--orange); font-size: .95rem; }
+
+/* Abrasivos intro row */
+.abr-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 60px;
+}
+.abr-intro-img {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.abr-intro-img img { width: 100%; height: 300px; object-fit: cover; }
+.abr-section-bg { background: #fff; }
+
+/* ─────────────────────────────────────────────
+   PARTNERS / MARQUEE
+───────────────────────────────────────────── */
+.partners-bg { background: var(--gray-50); }
+
+.mq-outer {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+/* fade edges */
+.mq-outer::before,
+.mq-outer::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.mq-outer::before { left: 0;  background: linear-gradient(to right, var(--gray-50), transparent); }
+.mq-outer::after  { right: 0; background: linear-gradient(to left,  var(--gray-50), transparent); }
+.mq-outer.white-bg::before { background: linear-gradient(to right, #fff, transparent); }
+.mq-outer.white-bg::after  { background: linear-gradient(to left,  #fff, transparent); }
+
+.mq-track {
+  display: inline-flex;
+  animation: mq-scroll 46s linear infinite;
+}
+.mq-track.reverse {
+  animation-name: mq-scroll-rev;
+  animation-duration: 42s;
+}
+.mq-outer:hover .mq-track { animation-play-state: paused; }
+
+@keyframes mq-scroll     { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
+@keyframes mq-scroll-rev { from { transform: translateX(-50%); } to { transform: translateX(0); }    }
+
+.logo-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  width: 152px;
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  padding: 14px;
+  flex-shrink: 0;
+  margin-right: 14px;
+  transition: border-color .3s, box-shadow .3s, opacity .3s, filter .3s;
+  filter: grayscale(100%);
+  opacity: .55;
+  cursor: default;
+}
+.logo-chip:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  border-color: var(--blue-100);
+  box-shadow: 0 4px 18px rgba(30,64,175,.12);
+}
+.logo-chip img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.logo-chip-text {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--gray-700);
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: -.2px;
+}
+
+/* certto highlight */
+.certto-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: var(--orange-50);
+  border: 1px solid var(--orange-100);
+  border-radius: var(--radius-xl);
+  padding: 22px 30px;
+  max-width: 520px;
+  margin: 44px auto 0;
+}
+.certto-hl-icon {
+  width: 48px; height: 48px;
+  background: var(--orange);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.certto-hl-icon i { color: #fff; font-size: 1.1rem; }
+.certto-hl-title { font-weight: 900; color: var(--gray-900); font-size: 15px; line-height: 1; margin-bottom: 4px; }
+.certto-hl-sub   { font-size: 13px; color: var(--gray-500); }
+
+/* ─────────────────────────────────────────────
+   DIFFERENTIALS
+───────────────────────────────────────────── */
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.diff-card {
+  background: #fff;
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-xl);
+  padding: 30px 26px;
+  transition: box-shadow .25s, transform .25s;
+}
+.diff-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+.diff-card.orange-accent .diff-icon-wrap { background: var(--orange-100); }
+.diff-card.orange-accent .diff-icon-wrap i { color: var(--orange); }
+
+.diff-icon-wrap {
+  width: 48px; height: 48px;
+  background: var(--blue-50);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.diff-icon-wrap i { color: var(--blue); font-size: 1.1rem; }
+.diff-title { font-size: 15px; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; }
+.diff-desc  { font-size: 13.5px; color: var(--gray-500); line-height: 1.65; }
+
+/* ─────────────────────────────────────────────
+   CTA SECTION
+───────────────────────────────────────────── */
+.cta-section {
+  background: var(--blue-dark);
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-dots {
+  position: absolute;
+  inset: 0;
+  opacity: .04;
+  background-image: radial-gradient(circle, #fff 1px, transparent 0);
+  background-size: 36px 36px;
+}
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.cta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.75);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 40px;
+  margin-bottom: 24px;
+}
+.cta-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  margin-bottom: 18px;
+}
+.cta-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+.cta-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 48px; }
+.cta-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #22C55E;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: var(--radius);
+  transition: all .25s;
+  box-shadow: 0 4px 20px rgba(34,197,94,.3);
+}
+.cta-wa-btn:hover {
+  background: #16A34A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(34,197,94,.4);
+}
+.cta-wa-btn i { font-size: 1.3rem; }
+.cta-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.cta-info-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13.5px; color: rgba(255,255,255,.55);
+  transition: color .2s;
+}
+.cta-info-item:hover { color: rgba(255,255,255,.85); }
+.cta-info-item i { font-size: .85rem; opacity: .7; }
+
+/* ─────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────── */
+.footer { background: var(--gray-900); padding: 64px 0 32px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.footer-brand-icon {
+  width: 64px; height: 64px;
+  background: var(--blue-mid);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.footer-brand-icon i { color: #fff; font-size: .9rem; }
+.footer-brand-name { font-size: 1.2rem; font-weight: 900; color: #fff; line-height: 1; }
+.footer-brand-sub  { font-size: 11px; font-weight: 700; color: var(--blue-mid); letter-spacing: .14em; text-transform: uppercase; margin-top: 3px; }
+.footer-desc { font-size: 13px; color: #6B7280; line-height: 1.7; margin: 16px 0 6px; max-width: 240px; }
+.footer-certto-note { font-size: 11.5px; color: #F97316; font-weight: 600; margin-bottom: 18px; }
+.footer-socials { display: flex; gap: 8px; }
+.footer-social {
+  width: 34px; height: 34px;
+  background: #374151;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.footer-social:hover { background: var(--blue); }
+.footer-social i { color: #9CA3AF; font-size: .8rem; transition: color .2s; }
+.footer-social:hover i { color: #fff; }
+.footer-social.wa:hover { background: #16A34A; }
+
+.footer-col-title { font-size: 11px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 18px; }
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13.5px; color: #6B7280; transition: color .2s; }
+.footer-links a:hover { color: #fff; }
+.footer-links a.orange { color: #F97316; }
+.footer-links a.orange:hover { color: #FB923C; }
+
+.footer-contact { display: flex; flex-direction: column; gap: 11px; }
+.footer-contact-item {
+  display: flex; align-items: flex-start; gap: 9px;
+  font-size: 13px; color: #6B7280; line-height: 1.5;
+  transition: color .2s;
+}
+.footer-contact-item:hover { color: #9CA3AF; }
+.footer-contact-item i { font-size: .8rem; margin-top: 2px; color: #4B5563; flex-shrink: 0; }
+
+.footer-bottom {
+  padding-top: 28px;
+  border-top: 1px solid #1F2937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-copy { font-size: 12px; color: #374151; }
+.footer-www  { font-size: 12px; color: #374151; transition: color .2s; }
+.footer-www:hover { color: #6B7280; }
+
+/* ─────────────────────────────────────────────
+   FADE-IN ON SCROLL
+───────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero-grid, .about-grid, .abr-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-bg-shape { display: none; }
+  .hero-img-wrap { display: none; }
+  .product-grid, .abrasivos-grid { grid-template-columns: repeat(2,1fr); }
+  .diff-grid { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); gap: 32px; }
+}
+@media (max-width: 640px) {
+  .section { padding: 64px 0; }
+  .container { padding: 0 18px; }
+  .product-grid, .abrasivos-grid { grid-template-columns: 1fr; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; }
+  .cta-btns  { flex-direction: column; align-items: center; }
+  .nav-links, #navbar .btn { display: none; }
+  #nav-hamburger { display: flex; flex-direction: column; }
+  .about-pills { grid-template-columns: repeat(3,1fr); }
+  .mq-outer::before, .mq-outer::after { width: 32px; }
+  #trabalhe-conosco .container > div { grid-template-columns: 1fr !important; gap: 28px !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── FLOATING WHATSAPP ────────────────────── -->
+<a href="https://wa.me/5541998473131" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ── NAVBAR ───────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#inicio" class="nav-logo">
+      <img src="logo-white.png" alt="Protect EPIs e Abrasivos" style="height:80px;width:auto;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div style="display:none;align-items:center;gap:11px">
+        <div class="nav-logo-icon"><i class="fas fa-shield-alt"></i></div>
+        <div>
+          <div class="nav-logo-name">PROTECT</div>
+          <div class="nav-logo-sub">EPIs e Abrasivos</div>
+        </div>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#inicio">Início</a>
+      <a href="#epis">Produtos</a>
+      <a href="#abrasivos" class="orange">Abrasivos</a>
+      <a href="#parceiros">Parceiros</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <a href="https://wa.me/5541998473131" target="_blank" class="btn btn-white">
+      <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+    </a>
+
+    <button id="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── MOBILE DRAWER ────────────────────────── -->
+<div id="mobile-drawer">
+  <a href="#inicio"    onclick="closeMenu()">Início</a>
+  <a href="#epis"      onclick="closeMenu()">Produtos (EPIs)</a>
+  <a href="#abrasivos" onclick="closeMenu()">Abrasivos · CERTTO</a>
+  <a href="#parceiros" onclick="closeMenu()">Parceiros</a>
+  <a href="#contato"   onclick="closeMenu()">Contato</a>
+  <a href="https://wa.me/5541998473131" target="_blank" class="btn btn-whatsapp drawer-cta" onclick="closeMenu()">
+    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+  </a>
+</div>
+
+<!-- ════════════════════════════════════════════
+     HERO
+═════════════════════════════════════════════ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg-shape"></div>
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- text -->
+      <div>
+        <div class="hero-badge">
+          <i class="fas fa-map-marker-alt" style="font-size:10px"></i>
+          Curitiba · PR — Distribuidor Exclusivo CERTTO
+        </div>
+        <h1 class="hero-title">
+          EPIs Certificados<br>e Abrasivos para<br><span>sua Empresa</span>
+        </h1>
+        <p class="hero-sub">
+          Luvas, botinas, capacetes, óculos, sinalização, discos de corte e muito mais. Atendimento direto, entrega rápida, preço competitivo.
+        </p>
+        <div class="hero-btns">
+          <a href="https://wa.me/5541998473131" target="_blank" class="btn btn-primary btn-lg">
+            <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+          </a>
+          <a href="#epis" class="btn btn-outline btn-lg">
+            Ver Catálogo <i class="fas fa-arrow-right" style="font-size:12px"></i>
+          </a>
+        </div>
+        <div class="hero-phones">
+          <a href="tel:+5541998473131" class="hero-phone-item">
+            <i class="fas fa-phone"></i> (41) 99847-3131
+          </a>
+          <div class="hero-phone-sep"></div>
+          <a href="tel:+5541999593505" class="hero-phone-item">
+            <i class="fas fa-phone"></i> (41) 99959-3505
+          </a>
+        </div>
+      </div>
+
+      <!-- image -->
+      <div class="hero-img-wrap">
+        <img
+          src="foto1.png"
+          alt="Profissionais usando EPIs — capacete, colete e óculos de proteção"
+          class="hero-main-img"
+        >
+        <div class="hero-badge-float bottom">
+          <div class="float-icon"><i class="fas fa-certificate"></i></div>
+          <div>
+            <div class="float-value">100% com CA</div>
+            <div class="float-sub">EPIs certificados MTE</div>
+          </div>
+        </div>
+        <div class="hero-badge-float top">
+          <div class="float-label" style="color:rgba(255,255,255,.75)">Exclusivo</div>
+          <div class="float-value" style="color:#fff;font-size:1.2rem">CERTTO</div>
+          <div class="float-sub" style="color:rgba(255,255,255,.65)">Curitiba</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     STATS BAR
+═════════════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="reveal">
+        <div class="stat-num">80+</div>
+        <div class="stat-label">Marcas Parceiras</div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Clientes Atendidos</div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="stat-num">20mil+</div>
+        <div class="stat-label">Produtos em Estoque</div>
+      </div>
+      <div class="reveal reveal-delay-3">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">EPIs com Certificado CA</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SOBRE
+═════════════════════════════════════════════ -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- images -->
+      <div class="about-imgs reveal">
+        <div class="about-img-tall">
+          <img src="foto2.png" alt="Trabalhadora com EPI" style="object-position: 80% center;">
+        </div>
+        <div class="about-img-sm">
+          <img src="foto3.png" alt="Óculos e protetor auricular de segurança">
+        </div>
+        <div class="about-img-sm">
+          <img src="foto4.png" alt="Soldador com luvas e máscara de proteção">
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="reveal reveal-delay-1">
+        <div class="section-tag">Sobre a Protect</div>
+        <h2 class="section-title">EPIs e Abrasivos com<br>qualidade e compromisso</h2>
+        <p style="color:var(--gray-500);line-height:1.75;margin-top:16px;font-size:15px">
+          A <strong style="color:var(--gray-800)">Protect EPIs e Abrasivos</strong> é especializada no fornecimento de equipamentos de proteção individual e insumos industriais, com sede em <strong style="color:var(--gray-700)">Curitiba — PR</strong>.
+        </p>
+        <p style="color:var(--gray-500);line-height:1.75;margin-top:12px;font-size:15px">
+          Nossos produtos unem máxima segurança ao melhor custo-benefício, atendendo empresas que priorizam a proteção dos seus colaboradores.
+        </p>
+
+        <div class="certto-badge">
+          <div class="certto-icon"><i class="fas fa-star"></i></div>
+          <div>
+            <div class="certto-title">Distribuidor Exclusivo</div>
+            <div class="certto-text">CERTTO — Curitiba / PR</div>
+          </div>
+        </div>
+
+        <div class="about-checklist">
+          <div class="about-check">
+            <div class="check-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <div class="check-title">Produtos com CA</div>
+              <div class="check-sub">Todos os EPIs com Certificado de Aprovação válido e homologado pelo MTE.</div>
+            </div>
+          </div>
+          <div class="about-check">
+            <div class="check-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <div class="check-title">Atendimento Direto</div>
+              <div class="check-sub">Fale diretamente com nossa equipe via WhatsApp — sem robô, sem fila.</div>
+            </div>
+          </div>
+          <div class="about-check">
+            <div class="check-icon"><i class="fas fa-truck"></i></div>
+            <div>
+              <div class="check-title">Entrega Rápida</div>
+              <div class="check-sub">Estoque robusto e logística eficiente para pedidos pontuais e emergenciais.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-pills">
+          <div class="about-pill">
+            <div class="about-pill-num">20+</div>
+            <div class="about-pill-label">Marcas</div>
+          </div>
+          <div class="about-pill">
+            <div class="about-pill-num">100+</div>
+            <div class="about-pill-label">Clientes</div>
+          </div>
+          <div class="about-pill">
+            <div class="about-pill-num">500+</div>
+            <div class="about-pill-label">Produtos</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     EPIs
+═════════════════════════════════════════════ -->
+<section class="section" id="epis" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="section-head text-center reveal" style="text-align:center">
+      <div class="section-tag center">EPIs — Equipamentos de Proteção Individual</div>
+      <h2 class="section-title" style="text-align:center">Produtos certificados para sua equipe</h2>
+      <p class="section-sub center">
+        Todos os nossos EPIs possuem <strong>CA (Certificado de Aprovação)</strong> do Ministério do Trabalho.
+      </p>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card reveal">
+        <div class="card-icon"><i class="fas fa-hands"></i></div>
+        <div class="card-title">Luvas de Proteção</div>
+        <div class="card-desc">Nitrílico, látex, raspa de couro, vaqueta, PVC, aramida e mais. Todos com CA.</div>
+        <a href="https://wa.me/5541998473131" target="_blank" class="card-link">
+          Orçamento <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="product-card reveal reveal-delay-1">
+        <div class="card-icon"><i class="fas fa-shoe-prints"></i></div>
+        <div class="card-title">Calçados de Segurança</div>
+        <div class="card-desc">Botinas, botas, sapatos e tênis com biqueira. Industrial, agrícola e alimentícia.</div>
+        <a href="https://wa.me/5541998473131" target="_blank" class="card-link">
+          Orçamento <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="product-card reveal reveal-delay-2">
+        <div class="card-icon"><i class="fas fa-hard-hat"></i></div>
+        <div class="card-title">Proteção Facial e Craniana</div>
+        <div class="card-desc">Capacetes, respiradores, máscaras semi-faciais, face shields e kits completos.</div>
+        <a href="https://wa.me/5541998473131" target="_blank" class="card-link">
+          Orçamento <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="product-card reveal reveal-delay-3">
+        <div class="card-icon"><i class="fas fa-eye"></i></div>
+        <div class="card-title">Proteção Auditiva e Visual</div>
+        <div class="card-desc">Abafadores, protetores foam, óculos de proteção, ampla visão e sobrepor.</div>
+        <a href="https://wa.me/5541998473131" target="_blank" class="card-link">
+          Orçamento <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="card-icon"><i class="fas fa-link"></i></div>
+        <div class="card-title">Cintos e Talabartes</div>
+        <div class="card-desc">Cintos de 1, 2, 4 e 5 pontos. Trava-quedas, talabarte Y com gancho em aço.</div>
+        <a href="https://wa.me/5541998473131" target="_blank" class="card-link">
+          Orçamento <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="product-card reveal reveal-delay-1">
+        <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="card-title">Sinalização Industrial</div>
+        <div class="card-desc">Cones, placas, fitas de isolamento, cerquites, pedestal e corrente.</div>
+        <a href="https://wa.me/5541998473131" target="_blank" class="card-link">
+          Orçamento <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="product-card reveal reveal-delay-2">
+        <div class="card-icon"><i class="fas fa-vest"></i></div>
+        <div class="card-title">Vestimentas e Uniformes</div>
+        <div class="card-desc">Coletes refletivos, capas de chuva, conjuntos motoqueiro, jalecos e uniformes.</div>
+        <a href="https://wa.me/5541998473131" target="_blank" class="card-link">
+          Orçamento <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+      <div class="product-card reveal reveal-delay-3">
+        <div class="card-icon"><i class="fas fa-plus-circle"></i></div>
+        <div class="card-title">Outros EPIs</div>
+        <div class="card-desc">Protetor solar, repelente, luva química, mangote, perneira e muito mais.</div>
+        <a href="https://wa.me/5541998473131" target="_blank" class="card-link">
+          Orçamento <i class="fas fa-arrow-right" style="font-size:11px"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a href="https://wa.me/5541998473131" target="_blank" class="btn btn-primary btn-lg">
+        <i class="fab fa-whatsapp"></i> Solicitar Orçamento de EPIs
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     ABRASIVOS
+═════════════════════════════════════════════ -->
+<section class="section abr-section-bg" id="abrasivos">
+  <div class="container">
+
+    <div class="abr-intro-grid">
+      <div class="reveal">
+        <div class="section-tag orange">Abrasivos · Distribuidor Exclusivo CERTTO em Curitiba</div>
+        <h2 class="section-title">Abrasivos, Soldas<br>e Diamantados</h2>
+        <p style="color:var(--gray-500);line-height:1.75;margin-top:14px;font-size:15px">
+          Distribuidores exclusivos <strong style="color:var(--orange)">CERTTO</strong> em Curitiba. Discos, brocas, lâminas e linhas de solda para todos os processos industriais.
+        </p>
+        <div style="margin-top:28px">
+          <a href="https://wa.me/5541998473131" target="_blank" class="btn btn-orange btn-lg">
+            <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+      <div class="abr-intro-img reveal reveal-delay-1">
+        <img src="foto5.png" alt="Soldagem de estrutura metálica">
+      </div>
+    </div>
+
+    <div class="abrasivos-grid">
+
+      <div class="abr-card reveal">
+        <div class="abr-icon"><i class="fas fa-compact-disc"></i></div>
+        <div class="card-title">Linha de Corte</div>
+        <div class="card-desc">Discos de corte para aço carbono e inox. Linhas Standard e Turbo. 115 a 355mm.</div>
+      </div>
+
+      <div class="abr-card reveal reveal-delay-1">
+        <div class="abr-icon"><i class="fas fa-circle-notch"></i></div>
+        <div class="card-title">Linha de Desbaste</div>
+        <div class="card-desc">Discos Standard, Turbo e Ferro Fundido. 115 a 230mm.</div>
+      </div>
+
+      <div class="abr-card reveal reveal-delay-2">
+        <div class="abr-icon"><i class="fas fa-fan"></i></div>
+        <div class="card-title">Linha Flap</div>
+        <div class="card-desc">Discos flap nylon, fibra reto e polimento. Grãos G40 a G120.</div>
+      </div>
+
+      <div class="abr-card reveal reveal-delay-3">
+        <div class="abr-icon"><i class="fas fa-fire"></i></div>
+        <div class="card-title">Linha de Solda</div>
+        <div class="card-desc">Arame MIG, MIG Tubular, MIG Alumínio, Eletrodos E6013 e 7018.</div>
+      </div>
+
+      <div class="abr-card reveal">
+        <div class="abr-icon"><i class="fas fa-toolbox"></i></div>
+        <div class="card-title">Linha de Brocas</div>
+        <div class="card-desc">Brocas HSS DIN 338/340 industrial e titânio. Centro, alargadores e machos.</div>
+      </div>
+
+      <div class="abr-card reveal reveal-delay-1">
+        <div class="abr-icon"><i class="fas fa-gem"></i></div>
+        <div class="card-title">Linha Diamantada</div>
+        <div class="card-desc">Discos diamantados segmentados e turbo. Rebolos diamantados. 110 a 350mm.</div>
+      </div>
+
+      <div class="abr-card reveal reveal-delay-2">
+        <div class="abr-icon"><i class="fas fa-th-large"></i></div>
+        <div class="card-title">Lâminas Serra Circular</div>
+        <div class="card-desc">Lâminas de 110 a 450mm para madeira e tungstênio. Variados números de dentes.</div>
+      </div>
+
+      <div class="abr-card reveal reveal-delay-3">
+        <div class="abr-icon"><i class="fas fa-eraser"></i></div>
+        <div class="card-title">Linha de Remoção</div>
+        <div class="card-desc">Discos removedor, feltro liso e feltro flap. 115x22,23mm.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     PARCEIROS — marquee com logof1..logof22
+═════════════════════════════════════════════ -->
+<section class="section partners-bg" id="parceiros">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-bottom:52px">
+      <div class="section-tag center">Marcas e Parceiros</div>
+      <h2 class="section-title" style="text-align:center">Principais Marcas que Distribuímos</h2>
+      <p class="section-sub center">Mais de 20 fabricantes líderes do mercado de EPIs e insumos industriais.</p>
+    </div>
+
+    <!-- Row 1 — logof1 a logof11 -->
+    <div class="mq-outer reveal" style="margin-bottom:14px">
+      <div class="mq-track" id="mq1">
+        <!-- set A -->
+        <div class="logo-chip"><img src="logof1.png"  alt="Parceiro 1"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 1</span>'"></div>
+        <div class="logo-chip"><img src="logof2.png"  alt="Parceiro 2"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 2</span>'"></div>
+        <div class="logo-chip"><img src="logof3.png"  alt="Parceiro 3"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 3</span>'"></div>
+        <div class="logo-chip"><img src="logof4.png"  alt="Parceiro 4"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 4</span>'"></div>
+        <div class="logo-chip"><img src="logof5.png"  alt="Parceiro 5"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 5</span>'"></div>
+        <div class="logo-chip"><img src="logof6.png"  alt="Parceiro 6"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 6</span>'"></div>
+        <div class="logo-chip"><img src="logof7.png"  alt="Parceiro 7"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 7</span>'"></div>
+        <div class="logo-chip"><img src="logof8.png"  alt="Parceiro 8"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 8</span>'"></div>
+        <div class="logo-chip"><img src="logof9.png"  alt="Parceiro 9"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 9</span>'"></div>
+        <div class="logo-chip"><img src="logof10.png" alt="Parceiro 10" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 10</span>'"></div>
+        <div class="logo-chip"><img src="logof11.png" alt="Parceiro 11" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 11</span>'"></div>
+        <!-- set B (duplicate for seamless loop) -->
+        <div class="logo-chip"><img src="logof1.png"  alt="Parceiro 1"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 1</span>'"></div>
+        <div class="logo-chip"><img src="logof2.png"  alt="Parceiro 2"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 2</span>'"></div>
+        <div class="logo-chip"><img src="logof3.png"  alt="Parceiro 3"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 3</span>'"></div>
+        <div class="logo-chip"><img src="logof4.png"  alt="Parceiro 4"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 4</span>'"></div>
+        <div class="logo-chip"><img src="logof5.png"  alt="Parceiro 5"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 5</span>'"></div>
+        <div class="logo-chip"><img src="logof6.png"  alt="Parceiro 6"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 6</span>'"></div>
+        <div class="logo-chip"><img src="logof7.png"  alt="Parceiro 7"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 7</span>'"></div>
+        <div class="logo-chip"><img src="logof8.png"  alt="Parceiro 8"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 8</span>'"></div>
+        <div class="logo-chip"><img src="logof9.png"  alt="Parceiro 9"  onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 9</span>'"></div>
+        <div class="logo-chip"><img src="logof10.png" alt="Parceiro 10" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 10</span>'"></div>
+        <div class="logo-chip"><img src="logof11.png" alt="Parceiro 11" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 11</span>'"></div>
+      </div>
+    </div>
+
+    <!-- Row 2 — logof12 a logof22 (reverse) -->
+    <div class="mq-outer reveal">
+      <div class="mq-track reverse" id="mq2">
+        <!-- set A -->
+        <div class="logo-chip"><img src="logof12.png" alt="Parceiro 12" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 12</span>'"></div>
+        <div class="logo-chip"><img src="logof13.png" alt="Parceiro 13" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 13</span>'"></div>
+        <div class="logo-chip"><img src="logof14.png" alt="Parceiro 14" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 14</span>'"></div>
+        <div class="logo-chip"><img src="logof15.png" alt="Parceiro 15" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 15</span>'"></div>
+        <div class="logo-chip"><img src="logof16.png" alt="Parceiro 16" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 16</span>'"></div>
+        <div class="logo-chip"><img src="logof17.png" alt="Parceiro 17" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 17</span>'"></div>
+        <div class="logo-chip"><img src="logof18.png" alt="Parceiro 18" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 18</span>'"></div>
+        <div class="logo-chip"><img src="logof19.png" alt="Parceiro 19" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 19</span>'"></div>
+        <div class="logo-chip"><img src="logof20.png" alt="Parceiro 20" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 20</span>'"></div>
+        <div class="logo-chip"><img src="logof21.png" alt="Parceiro 21" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 21</span>'"></div>
+        <div class="logo-chip" style="border-color:#FFE4CC"><img src="logof22.png" alt="CERTTO" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text style=color:#EA580C>CERTTO</span>'"></div>
+        <!-- set B -->
+        <div class="logo-chip"><img src="logof12.png" alt="Parceiro 12" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 12</span>'"></div>
+        <div class="logo-chip"><img src="logof13.png" alt="Parceiro 13" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 13</span>'"></div>
+        <div class="logo-chip"><img src="logof14.png" alt="Parceiro 14" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 14</span>'"></div>
+        <div class="logo-chip"><img src="logof15.png" alt="Parceiro 15" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 15</span>'"></div>
+        <div class="logo-chip"><img src="logof16.png" alt="Parceiro 16" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 16</span>'"></div>
+        <div class="logo-chip"><img src="logof17.png" alt="Parceiro 17" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 17</span>'"></div>
+        <div class="logo-chip"><img src="logof18.png" alt="Parceiro 18" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 18</span>'"></div>
+        <div class="logo-chip"><img src="logof19.png" alt="Parceiro 19" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 19</span>'"></div>
+        <div class="logo-chip"><img src="logof20.png" alt="Parceiro 20" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 20</span>'"></div>
+        <div class="logo-chip"><img src="logof21.png" alt="Parceiro 21" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text>logo 21</span>'"></div>
+        <div class="logo-chip" style="border-color:#FFE4CC"><img src="logof22.png" alt="CERTTO" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=logo-chip-text style=color:#EA580C>CERTTO</span>'"></div>
+      </div>
+    </div>
+
+    <div class="certto-highlight reveal">
+      <div class="certto-hl-icon"><i class="fas fa-star"></i></div>
+      <div>
+        <div class="certto-hl-title">Distribuidor Exclusivo CERTTO em Curitiba — PR</div>
+        <div class="certto-hl-sub">Abrasivos, soldas e diamantados com a melhor qualidade do mercado.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     DIFERENCIAIS
+═════════════════════════════════════════════ -->
+<section class="section" id="diferenciais" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center">
+      <div class="section-tag center">Diferenciais</div>
+      <h2 class="section-title" style="text-align:center">Por que escolher a Protect?</h2>
+      <p class="section-sub center">Diferenciais que fazem a diferença no dia a dia da sua empresa.</p>
+    </div>
+    <div class="diff-grid">
+
+      <div class="diff-card reveal">
+        <div class="diff-icon-wrap"><i class="fas fa-certificate"></i></div>
+        <div class="diff-title">Produtos com CA</div>
+        <div class="diff-desc">Todos os EPIs possuem Certificado de Aprovação do Ministério do Trabalho.</div>
+      </div>
+
+      <div class="diff-card reveal reveal-delay-1">
+        <div class="diff-icon-wrap"><i class="fas fa-truck"></i></div>
+        <div class="diff-title">Entrega Rápida</div>
+        <div class="diff-desc">Agilidade no abastecimento da sua empresa com estoque variado e pronto.</div>
+      </div>
+
+      <div class="diff-card reveal reveal-delay-2">
+        <div class="diff-icon-wrap" style="background:#F0FDF4"><i class="fab fa-whatsapp" style="color:#16A34A"></i></div>
+        <div class="diff-title">Atendimento Direto</div>
+        <div class="diff-desc">Fale direto com a equipe via WhatsApp — sem fila, sem robô, sem demora.</div>
+      </div>
+
+      <div class="diff-card reveal">
+        <div class="diff-icon-wrap"><i class="fas fa-industry"></i></div>
+        <div class="diff-title">Foco em Indústria</div>
+        <div class="diff-desc">Especialistas em atender empresas industriais, construtoras e serviços.</div>
+      </div>
+
+      <div class="diff-card orange-accent reveal reveal-delay-1">
+        <div class="diff-icon-wrap"><i class="fas fa-star"></i></div>
+        <div class="diff-title">Distribuidor CERTTO</div>
+        <div class="diff-desc">Distribuidores exclusivos da linha CERTTO de abrasivos em Curitiba.</div>
+      </div>
+
+      <div class="diff-card reveal reveal-delay-2">
+        <div class="diff-icon-wrap"><i class="fas fa-boxes"></i></div>
+        <div class="diff-title">Estoque Completo</div>
+        <div class="diff-desc">Grande variedade de produtos disponíveis para pronta entrega.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     CTA
+═════════════════════════════════════════════ -->
+<section class="cta-section" id="contato">
+  <div class="cta-dots"></div>
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-pill">
+        <i class="fas fa-shield-alt"></i> Precisa de EPIs ou Abrasivos?
+      </div>
+      <h2 class="cta-title">
+        Fale com nossa equipe<br>agora mesmo pelo WhatsApp.
+      </h2>
+      <p class="cta-sub">
+        Atendimento direto, sem fila e sem robô. Nossa equipe está pronta para enviar orçamento com agilidade.
+      </p>
+      <div class="cta-btns">
+        <a href="https://wa.me/5541998473131" target="_blank" class="cta-wa-btn">
+          <i class="fab fa-whatsapp"></i> (41) 99847-3131
+        </a>
+        <a href="https://wa.me/5541999593505" target="_blank" class="cta-wa-btn" style="background:#16A34A">
+          <i class="fab fa-whatsapp"></i> (41) 99959-3505
+        </a>
+      </div>
+      <div class="cta-info">
+        <a href="mailto:renato@protect.ind.br" class="cta-info-item">
+          <i class="fas fa-envelope"></i> renato@protect.ind.br
+        </a>
+        <a href="mailto:vendas01@protect.ind.br" class="cta-info-item">
+          <i class="fas fa-envelope"></i> vendas01@protect.ind.br
+        </a>
+        <div class="cta-info-item">
+          <i class="fas fa-map-marker-alt"></i> Rua Primeiro de Maio, 1482 — Xaxim, Curitiba — PR
+        </div>
+        <div class="cta-info-item">
+          <i class="fas fa-clock"></i> Seg–Sex: 07h às 18h
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     TRABALHE CONOSCO
+═════════════════════════════════════════════ -->
+<section id="trabalhe-conosco" style="background:var(--gray-50);padding:80px 0;border-top:1px solid var(--gray-200)">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center" class="reveal">
+
+      <!-- left -->
+      <div>
+        <div class="section-tag">Faça parte do time</div>
+        <h2 style="font-size:clamp(1.7rem,3vw,2.2rem);font-weight:900;color:var(--gray-900);line-height:1.15;letter-spacing:-.02em;margin-bottom:14px">
+          Venha trabalhar<br>conosco
+        </h2>
+        <p style="font-size:14.5px;color:var(--gray-500);line-height:1.75;margin-bottom:0">
+          Buscamos profissionais comprometidos com qualidade, atendimento e segurança do trabalho. Se você tem perfil comercial, técnico ou logístico, queremos conhecer você.
+        </p>
+      </div>
+
+      <!-- right -->
+      <div style="background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:28px 26px">
+        <div style="width:44px;height:44px;background:var(--blue-50);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+          <i class="fas fa-paper-plane" style="color:var(--blue);font-size:.95rem"></i>
+        </div>
+        <div style="font-size:15px;font-weight:700;color:var(--gray-900);margin-bottom:6px">Envie seu currículo</div>
+        <p style="font-size:13px;color:var(--gray-500);line-height:1.6;margin-bottom:20px">
+          Envie seu currículo para o e-mail abaixo com o assunto <strong style="color:var(--gray-700)">"Currículo — [sua área]"</strong> e nossa equipe entrará em contato.
+        </p>
+        <a href="mailto:contato@protect.ind.br?subject=Currículo" class="btn btn-primary" style="width:100%;justify-content:center;font-size:14px">
+          <i class="fas fa-envelope"></i> contato@protect.ind.br
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+═════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- brand -->
+      <div>
+        <div style="margin-bottom:16px">
+          <img src="logo-dark.png" alt="Protect EPIs e Abrasivos" style="height:100px;width:auto;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div style="display:none;align-items:center;gap:11px">
+            <div class="footer-brand-icon"><i class="fas fa-shield-alt"></i></div>
+            <div>
+              <div class="footer-brand-name">PROTECT</div>
+              <div class="footer-brand-sub">EPIs e Abrasivos</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-desc">
+          Distribuidor de EPIs certificados, abrasivos e soluções industriais para empresas em Curitiba e todo o Brasil.
+        </div>
+        <div class="footer-certto-note">Distribuidor Exclusivo CERTTO em Curitiba — PR</div>
+        <div class="footer-socials">
+          <a href="https://instagram.com/protectepis.br" target="_blank" class="footer-social" title="@protectepis.br">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5541998473131" target="_blank" class="footer-social wa">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.protect.ind.br" target="_blank" class="footer-social">
+            <i class="fas fa-globe"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- nav -->
+      <div>
+        <div class="footer-col-title">Navegação</div>
+        <div class="footer-links">
+          <a href="#inicio">Início</a>
+          <a href="#epis">Produtos (EPIs)</a>
+          <a href="#abrasivos" class="orange">Abrasivos · CERTTO</a>
+          <a href="#parceiros">Parceiros</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+
+      <!-- categories -->
+      <div>
+        <div class="footer-col-title">Produtos</div>
+        <div class="footer-links">
+          <a href="#epis">Luvas de Proteção</a>
+          <a href="#epis">Calçados de Segurança</a>
+          <a href="#epis">Capacetes e Respiradores</a>
+          <a href="#epis">Sinalização Industrial</a>
+          <a href="#abrasivos" class="orange">Discos de Corte</a>
+          <a href="#abrasivos" class="orange">Linha de Solda</a>
+        </div>
+      </div>
+
+      <!-- contact -->
+      <div>
+        <div class="footer-col-title">Contato</div>
+        <div class="footer-contact">
+          <a href="https://wa.me/5541998473131" target="_blank" class="footer-contact-item">
+            <i class="fab fa-whatsapp" style="color:#22C55E"></i>
+            (41) 99847-3131
+          </a>
+          <a href="https://wa.me/5541999593505" target="_blank" class="footer-contact-item">
+            <i class="fab fa-whatsapp" style="color:#22C55E"></i>
+            (41) 99959-3505
+          </a>
+          <a href="mailto:renato@protect.ind.br" class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            renato@protect.ind.br
+          </a>
+          <a href="mailto:vendas01@protect.ind.br" class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            vendas01@protect.ind.br
+          </a>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            Rua Primeiro de Maio, 1482<br>Xaxim, Curitiba — PR
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            Seg–Sex: 07h às 18h
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 Protect EPIs e Abrasivos. Todos os direitos reservados.</div>
+      <a href="https://www.protect.ind.br" target="_blank" class="footer-www">www.protect.ind.br</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════
+     JAVASCRIPT
+═════════════════════════════════════════════ -->
+<script>
+/* navbar scroll shadow */
+window.addEventListener('scroll', function () {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 15);
+});
+
+/* mobile menu */
+function toggleMenu() {
+  var drawer = document.getElementById('mobile-drawer');
+  var ham    = document.getElementById('nav-hamburger');
+  var open   = drawer.classList.toggle('open');
+  var spans  = ham.querySelectorAll('span');
+  if (open) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+    spans[1].style.opacity   = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+  } else {
+    spans[0].style.transform = '';
+    spans[1].style.opacity   = '';
+    spans[2].style.transform = '';
+  }
+}
+function closeMenu() {
+  document.getElementById('mobile-drawer').classList.remove('open');
+  var spans = document.getElementById('nav-hamburger').querySelectorAll('span');
+  spans[0].style.transform = '';
+  spans[1].style.opacity   = '';
+  spans[2].style.transform = '';
+}
+
+/* smooth scroll */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    closeMenu();
+  });
+});
+
+/* reveal on scroll */
+var revealObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(function (el) {
+  revealObserver.observe(el);
+});
+</script>
+</body>
+</html>
